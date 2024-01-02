@@ -1,0 +1,72 @@
+
+Call:
+ivreg(formula = lhours ~ lwage + educ + age + kidslt6 + nwifeinc | 
+    educ + age + kidslt6 + nwifeinc + exper + expersq, data = mroz)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-13.4572  -1.0633  -0.3742   0.8514  17.0401 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  5.866214   0.879574   6.669 5.00e-11 ***
+lwage        5.095678   0.396105  12.864  < 2e-16 ***
+educ        -0.294421   0.068746  -4.283 2.09e-05 ***
+age         -0.033594   0.014581  -2.304   0.0215 *  
+kidslt6     -0.374665   0.260281  -1.439   0.1504    
+nwifeinc    -0.013645   0.009646  -1.415   0.1576    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.803 on 747 degrees of freedom
+Multiple R-Squared: 0.356,	Adjusted R-squared: 0.3517 
+Wald test: 68.43 on 5 and 747 DF,  p-value: < 2.2e-16 
+
+
+Call:
+ivreg(formula = lhours ~ lwage + educ + age + kidslt6 + nwifeinc | 
+    motheduc + fatheduc + age + kidslt6 + nwifeinc + exper + 
+        expersq, data = mroz)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-12.6959  -1.0248  -0.4488   0.8316  16.7373 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.63652    1.36794   2.658  0.00802 ** 
+lwage        4.80096    0.39197  12.248  < 2e-16 ***
+educ        -0.08570    0.11611  -0.738  0.46068    
+age         -0.03047    0.01424  -2.139  0.03274 *  
+kidslt6     -0.51673    0.25658  -2.014  0.04438 *  
+nwifeinc    -0.02530    0.01074  -2.356  0.01872 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.713 on 747 degrees of freedom
+Multiple R-Squared: 0.3964,	Adjusted R-squared: 0.3923 
+Wald test: 69.65 on 5 and 747 DF,  p-value: < 2.2e-16 
+
+
+Call:
+lm(formula = uhat ~ expersq + motheduc + fatheduc + age + kidslt6 + 
+    nwifeinc, data = mroz)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-12.6775  -1.0063  -0.4456   0.8248  16.6961 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)
+(Intercept) -4.751e-02  7.514e-01  -0.063    0.950
+expersq      5.358e-05  4.380e-04   0.122    0.903
+motheduc     2.208e-02  3.648e-02   0.605    0.545
+fatheduc    -2.073e-02  3.421e-02  -0.606    0.545
+age          9.852e-05  1.499e-02   0.007    0.995
+kidslt6      3.148e-03  2.103e-01   0.015    0.988
+nwifeinc     5.661e-04  8.906e-03   0.064    0.949
+
+Residual standard error: 2.714 on 746 degrees of freedom
+Multiple R-squared:  0.0006604,	Adjusted R-squared:  -0.007377 
+F-statistic: 0.08216 on 6 and 746 DF,  p-value: 0.9979
+

@@ -1,0 +1,21 @@
+
+Call:
+lm(formula = lwage ~ educ + exper + exprtenure, data = wage2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.8282 -0.2401  0.0203  0.2569  1.3400 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 5.496696   0.110528  49.731  < 2e-16 ***
+educ        0.074864   0.006512  11.495  < 2e-16 ***
+exper       0.001954   0.004743   0.412    0.681    
+exprtenure  0.013375   0.002587   5.170 2.87e-07 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3877 on 931 degrees of freedom
+Multiple R-squared:  0.1551,	Adjusted R-squared:  0.1524 
+F-statistic: 56.97 on 3 and 931 DF,  p-value: < 2.2e-16
+

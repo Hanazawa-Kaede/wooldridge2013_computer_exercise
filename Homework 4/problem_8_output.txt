@@ -1,0 +1,25 @@
+[1] 957.9455
+[1] 101.2824
+[1] 15.05264
+
+Call:
+lm(formula = wage ~ IQ, data = wage2)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-898.7 -256.5  -47.3  201.1 2072.6 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 116.9916    85.6415   1.366    0.172    
+IQ            8.3031     0.8364   9.927   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 384.8 on 933 degrees of freedom
+Multiple R-squared:  0.09554,	Adjusted R-squared:  0.09457 
+F-statistic: 98.55 on 1 and 933 DF,  p-value: < 2.2e-16
+
+[1] 124.546
+[1] 0.09553528
+[1] 0.1321073

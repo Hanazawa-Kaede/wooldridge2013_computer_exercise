@@ -1,0 +1,100 @@
+
+Call:
+lm(formula = lwage ~ sibs, data = wage2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.97662 -0.25857  0.02503  0.28572  1.22677 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  6.861076   0.022078 310.771  < 2e-16 ***
+sibs        -0.027904   0.005908  -4.723 2.68e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4164 on 933 degrees of freedom
+Multiple R-squared:  0.02335,	Adjusted R-squared:  0.0223 
+F-statistic: 22.31 on 1 and 933 DF,  p-value: 2.68e-06
+
+
+Call:
+lm(formula = educ ~ brthord, data = wage2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.8668 -1.5842 -0.7362  2.1332  6.1117 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 14.14945    0.12868 109.962  < 2e-16 ***
+brthord     -0.28264    0.04629  -6.106 1.55e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.155 on 850 degrees of freedom
+  (83 observations deleted due to missingness)
+Multiple R-squared:  0.04202,	Adjusted R-squared:  0.04089 
+F-statistic: 37.29 on 1 and 850 DF,  p-value: 1.551e-09
+
+
+Call:
+ivreg(formula = lwage ~ educ | brthord, data = wage2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.8532 -0.2557  0.0435  0.2970  1.3033 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  5.03040    0.43295  11.619  < 2e-16 ***
+educ         0.13064    0.03204   4.078 4.97e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4215 on 850 degrees of freedom
+Multiple R-Squared: -0.02862,	Adjusted R-squared: -0.02983 
+Wald test: 16.63 on 1 and 850 DF,  p-value: 4.975e-05 
+
+
+Call:
+lm(formula = educ ~ sibs + brthord, data = wage2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-5.1438 -1.6854 -0.6852  2.0090  5.9950 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 14.29650    0.13329 107.260  < 2e-16 ***
+sibs        -0.15287    0.03987  -3.834 0.000135 ***
+brthord     -0.15267    0.05708  -2.675 0.007619 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.137 on 849 degrees of freedom
+  (83 observations deleted due to missingness)
+Multiple R-squared:  0.05833,	Adjusted R-squared:  0.05611 
+F-statistic: 26.29 on 2 and 849 DF,  p-value: 8.33e-12
+
+
+Call:
+ivreg(formula = lwage ~ educ + sibs | brthord + sibs, data = wage2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.84808 -0.26227  0.03841  0.29901  1.30836 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 4.938527   1.055690   4.678 3.37e-06 ***
+educ        0.136994   0.074681   1.834   0.0669 .  
+sibs        0.002111   0.017372   0.122   0.9033    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.427 on 849 degrees of freedom
+Multiple R-Squared: -0.05428,	Adjusted R-squared: -0.05676 
+Wald test:  10.9 on 2 and 849 DF,  p-value: 2.124e-05 
+
+[1] -0.0007974783

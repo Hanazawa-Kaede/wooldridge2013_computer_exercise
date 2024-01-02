@@ -1,0 +1,39 @@
+
+Call:
+lm(formula = price ~ sqrft + bdrms, data = hprice1)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-127.627  -42.876   -7.051   32.589  229.003 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -19.31500   31.04662  -0.622    0.536    
+sqrft         0.12844    0.01382   9.291 1.39e-14 ***
+bdrms        15.19819    9.48352   1.603    0.113    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 63.04 on 85 degrees of freedom
+Multiple R-squared:  0.6319,	Adjusted R-squared:  0.6233 
+F-statistic: 72.96 on 2 and 85 DF,  p-value: < 2.2e-16
+
+[1] 88
+[1] 15.19819
+[1] 33.17926
+[1] 0.6319184
+$fit
+       1 
+354.6052 
+
+$se.fit
+[1] 8.41493
+
+$df
+[1] 85
+
+$residual.scale
+[1] 63.04484
+
+       1 
+54.60525 

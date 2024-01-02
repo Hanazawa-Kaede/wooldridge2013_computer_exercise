@@ -1,0 +1,32 @@
+
+Call:
+lm_robust(formula = price ~ lotsize + sqrft + bdrms, data = hprice1, 
+    se_type = "stata")
+
+Standard error type:  HC1 
+
+Coefficients:
+              Estimate Std. Error t value  Pr(>|t|)   CI Lower  CI Upper DF
+(Intercept) -21.770308  37.138211 -0.5862 5.593e-01 -9.562e+01 52.083096 84
+lotsize       0.002068   0.001251  1.6523 1.022e-01 -4.209e-04  0.004556 84
+sqrft         0.122778   0.017725  6.9267 8.096e-10  8.753e-02  0.158027 84
+bdrms        13.852522   8.478625  1.6338 1.060e-01 -3.008e+00 30.713197 84
+
+Multiple R-squared:  0.6724 ,	Adjusted R-squared:  0.6607 
+F-statistic: 23.72 on 3 and 84 DF,  p-value: 3.252e-11
+
+Call:
+lm_robust(formula = lprice ~ llotsize + lsqrft + bdrms, data = hprice1, 
+    se_type = "stata")
+
+Standard error type:  HC1 
+
+Coefficients:
+            Estimate Std. Error t value  Pr(>|t|) CI Lower CI Upper DF
+(Intercept) -1.29704    0.78131  -1.660 1.006e-01 -2.85077  0.25669 84
+llotsize     0.16797    0.04147   4.050 1.136e-04  0.08549  0.25044 84
+lsqrft       0.70023    0.10383   6.744 1.835e-09  0.49376  0.90671 84
+bdrms        0.03696    0.03060   1.208 2.305e-01 -0.02390  0.09781 84
+
+Multiple R-squared:  0.643 ,	Adjusted R-squared:  0.6302 
+F-statistic: 49.32 on 3 and 84 DF,  p-value: < 2.2e-16

@@ -1,0 +1,69 @@
+
+Call:
+lm(formula = voteA ~ prtystrA + democA + lexpendA + lexpendB, 
+    data = vote1)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-18.576  -4.864  -1.146   4.903  24.566 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 37.66142    4.73604   7.952 2.56e-13 ***
+prtystrA     0.25192    0.07129   3.534  0.00053 ***
+democA       3.79294    1.40652   2.697  0.00772 ** 
+lexpendA     5.77929    0.39182  14.750  < 2e-16 ***
+lexpendB    -6.23784    0.39746 -15.694  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 7.573 on 168 degrees of freedom
+Multiple R-squared:  0.8012,	Adjusted R-squared:  0.7964 
+F-statistic: 169.2 on 4 and 168 DF,  p-value: < 2.2e-16
+
+
+Call:
+lm(formula = uhat ~ prtystrA + democA + lexpendA + lexpendB, 
+    data = vote1)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-18.576  -4.864  -1.146   4.903  24.566 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)
+(Intercept) -8.869e-15  4.736e+00       0        1
+prtystrA     1.012e-16  7.129e-02       0        1
+democA       1.194e-15  1.407e+00       0        1
+lexpendA    -3.648e-16  3.918e-01       0        1
+lexpendB     9.420e-16  3.975e-01       0        1
+
+Residual standard error: 7.573 on 168 degrees of freedom
+Multiple R-squared:  3.616e-32,	Adjusted R-squared:  -0.02381 
+F-statistic: 1.519e-30 on 4 and 168 DF,  p-value: 1
+
+[1] 3.616078e-32
+     value      numdf      dendf 
+  2.330113   4.000000 168.000000 
+[1] 0.0580575
+
+Call:
+lm(formula = uhat^2 ~ yhat + I(yhat^2), data = vote1)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-107.65  -44.80  -29.88   23.81  539.52 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)   
+(Intercept) 171.85840   53.14213   3.234  0.00147 **
+yhat         -4.26368    2.16653  -1.968  0.05070 . 
+I(yhat^2)     0.03574    0.02124   1.682  0.09434 . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 81.66 on 170 degrees of freedom
+Multiple R-squared:  0.03173,	Adjusted R-squared:  0.02034 
+F-statistic: 2.786 on 2 and 170 DF,  p-value: 0.0645
+
+[1] 0.06449618

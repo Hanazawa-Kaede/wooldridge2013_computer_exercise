@@ -1,0 +1,61 @@
+
+Call:
+lm(formula = educ ~ exper + tenure, data = wage1)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-12.4285  -1.3536  -0.2055   1.6550   5.9791 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 13.574964   0.184324  73.647  < 2e-16 ***
+exper       -0.073785   0.009761  -7.559 1.83e-13 ***
+tenure       0.047680   0.018337   2.600  0.00958 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.63 on 523 degrees of freedom
+Multiple R-squared:  0.1013,	Adjusted R-squared:  0.09791 
+F-statistic: 29.49 on 2 and 523 DF,  p-value: 7.327e-13
+
+
+Call:
+lm(formula = lwage ~ uhat, data = wage1)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.12919 -0.32803 -0.07126  0.31626  1.51357 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.62327    0.02066   78.56   <2e-16 ***
+uhat         0.09203    0.00788   11.68   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4739 on 524 degrees of freedom
+Multiple R-squared:  0.2066,	Adjusted R-squared:  0.205 
+F-statistic: 136.4 on 1 and 524 DF,  p-value: < 2.2e-16
+
+
+Call:
+lm(formula = lwage ~ educ + exper + tenure, data = wage1)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.05802 -0.29645 -0.03265  0.28788  1.42809 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.284360   0.104190   2.729  0.00656 ** 
+educ        0.092029   0.007330  12.555  < 2e-16 ***
+exper       0.004121   0.001723   2.391  0.01714 *  
+tenure      0.022067   0.003094   7.133 3.29e-12 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4409 on 522 degrees of freedom
+Multiple R-squared:  0.316,	Adjusted R-squared:  0.3121 
+F-statistic: 80.39 on 3 and 522 DF,  p-value: < 2.2e-16
+
+[1] -8.465451e-16

@@ -1,0 +1,25 @@
+[1] 3445
+
+Call:
+lm(formula = nettfa ~ inc + age, data = k401ksubs[k401ksubs$marr == 
+    0, ])
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-182.70  -14.17   -3.73    5.77 1113.35 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -43.97943    3.50496  -12.55   <2e-16 ***
+inc           0.87987    0.05169   17.02   <2e-16 ***
+age           0.80046    0.07884   10.15   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 47.77 on 3442 degrees of freedom
+Multiple R-squared:  0.1076,	Adjusted R-squared:  0.1071 
+F-statistic: 207.5 on 2 and 3442 DF,  p-value: < 2.2e-16
+
+[1] 0.8004626
+[1] 0.07883695
+1%有意水準で有意 (p-value = 0.005708751 )

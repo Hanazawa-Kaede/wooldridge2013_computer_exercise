@@ -1,0 +1,140 @@
+
+Call:
+lm(formula = lm_formula, data = card)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-7.545 -1.370 -0.091  1.278  6.239 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 16.6382529  0.2406297  69.145  < 2e-16 ***
+nearc4       0.3198989  0.0878638   3.641 0.000276 ***
+exper       -0.4125334  0.0336996 -12.241  < 2e-16 ***
+I(exper^2)   0.0008686  0.0016504   0.526 0.598728    
+black       -0.9355287  0.0937348  -9.981  < 2e-16 ***
+smsa         0.4021825  0.1048112   3.837 0.000127 ***
+south       -0.0516126  0.1354284  -0.381 0.703152    
+smsa66       0.0254805  0.1057692   0.241 0.809644    
+reg662      -0.0786363  0.1871154  -0.420 0.674329    
+reg663      -0.0279390  0.1833745  -0.152 0.878913    
+reg664       0.1171820  0.2172531   0.539 0.589665    
+reg665      -0.2726165  0.2184204  -1.248 0.212082    
+reg666      -0.3028147  0.2370712  -1.277 0.201590    
+reg667      -0.2168177  0.2343879  -0.925 0.355021    
+reg668       0.5238914  0.2674749   1.959 0.050246 .  
+reg669       0.2102710  0.2024568   1.039 0.299076    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.941 on 2994 degrees of freedom
+Multiple R-squared:  0.4771,	Adjusted R-squared:  0.4745 
+F-statistic: 182.1 on 15 and 2994 DF,  p-value: < 2.2e-16
+
+
+Call:
+lm(formula = as.formula(lm_formula), data = card)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.62661 -0.22235  0.01862  0.23944  1.33226 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  5.8541450  0.0461620 126.817  < 2e-16 ***
+nearc4       0.0420679  0.0168557   2.496 0.012622 *  
+exper        0.0540214  0.0064649   8.356  < 2e-16 ***
+I(exper^2)  -0.0022207  0.0003166  -7.014 2.85e-12 ***
+black       -0.2698014  0.0179819 -15.004  < 2e-16 ***
+smsa         0.1646968  0.0201068   8.191 3.79e-16 ***
+south       -0.1514588  0.0259804  -5.830 6.14e-09 ***
+smsa66       0.0218819  0.0202906   1.078 0.280931    
+v2           0.0744417  0.0035060  21.233  < 2e-16 ***
+reg662       0.0904268  0.0358959   2.519 0.011816 *  
+reg663       0.1445847  0.0351783   4.110 4.06e-05 ***
+reg664       0.0653070  0.0416775   1.567 0.117230    
+reg665       0.1104218  0.0419014   2.635 0.008450 ** 
+reg666       0.1230816  0.0454794   2.706 0.006842 ** 
+reg667       0.1060598  0.0449646   2.359 0.018401 *  
+reg668      -0.0141833  0.0513120  -0.276 0.782250    
+reg669       0.1354657  0.0388390   3.488 0.000494 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3723 on 2993 degrees of freedom
+Multiple R-squared:  0.3001,	Adjusted R-squared:  0.2964 
+F-statistic: 80.21 on 16 and 2993 DF,  p-value: < 2.2e-16
+
+
+Call:
+ivreg(formula = lwage ~ educ + exper + expersq + black + smsa + 
+    south + smsa66 + reg662 + reg663 + reg664 + reg665 + reg666 + 
+    reg667 + reg668 + reg669 | nearc4 + exper + expersq + black + 
+    smsa + south + south66 + smsa66 + reg662 + reg663 + reg664 + 
+    reg665 + reg666 + reg667 + reg668 + reg669, data = card)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.83164 -0.24075  0.02428  0.25208  1.42760 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.6661509  0.9248295   3.964 7.54e-05 ***
+educ         0.1315038  0.0549637   2.393  0.01679 *  
+exper        0.1082711  0.0236586   4.576 4.92e-06 ***
+expersq     -0.0023349  0.0003335  -7.001 3.12e-12 ***
+black       -0.1467757  0.0538999  -2.723  0.00650 ** 
+smsa         0.1118083  0.0316620   3.531  0.00042 ***
+south       -0.1446715  0.0272846  -5.302 1.23e-07 ***
+smsa66       0.0185311  0.0216086   0.858  0.39119    
+reg662       0.1007678  0.0376857   2.674  0.00754 ** 
+reg663       0.1482588  0.0368141   4.027 5.78e-05 ***
+reg664       0.0498971  0.0437398   1.141  0.25406    
+reg665       0.1462719  0.0470639   3.108  0.00190 ** 
+reg666       0.1629029  0.0519096   3.138  0.00172 ** 
+reg667       0.1345722  0.0494023   2.724  0.00649 ** 
+reg668      -0.0830770  0.0593314  -1.400  0.16155    
+reg669       0.1078142  0.0418137   2.578  0.00997 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3883 on 2994 degrees of freedom
+Multiple R-Squared: 0.2382,	Adjusted R-squared: 0.2343 
+Wald test: 51.01 on 15 and 2994 DF,  p-value: < 2.2e-16 
+
+
+Call:
+lm(formula = u2 ~ nearc2 + nearc4 + exper + expersq + black + 
+    smsa + south + south66 + smsa66 + reg662 + reg663 + reg664 + 
+    reg665 + reg666 + reg667 + reg668 + reg669, data = card)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.84087 -0.24201  0.02214  0.25065  1.42081 
+
+Coefficients: (1 not defined because of singularities)
+              Estimate Std. Error t value Pr(>|t|)
+(Intercept) -5.431e-03  4.834e-02  -0.112    0.911
+nearc2       1.966e-02  1.550e-02   1.269    0.205
+nearc4       1.092e-04  1.758e-02   0.006    0.995
+exper        3.866e-05  6.743e-03   0.006    0.995
+expersq     -3.306e-06  3.302e-04  -0.010    0.992
+black       -1.542e-03  1.880e-02  -0.082    0.935
+smsa        -1.298e-04  2.097e-02  -0.006    0.995
+south        1.551e-03  2.713e-02   0.057    0.954
+south66      1.290e-03  4.691e-02   0.027    0.978
+smsa66      -4.061e-03  2.140e-02  -0.190    0.850
+reg662      -3.455e-03  3.754e-02  -0.092    0.927
+reg663       1.041e-03  3.670e-02   0.028    0.977
+reg664       2.220e-03  4.351e-02   0.051    0.959
+reg665      -6.088e-04  2.666e-02  -0.023    0.982
+reg666      -6.186e-03  3.220e-02  -0.192    0.848
+reg667              NA         NA      NA       NA
+reg668       4.299e-03  5.363e-02   0.080    0.936
+reg669      -6.632e-03  4.085e-02  -0.162    0.871
+
+Residual standard error: 0.3883 on 2993 degrees of freedom
+Multiple R-squared:  0.0005376,	Adjusted R-squared:  -0.004805 
+F-statistic: 0.1006 on 16 and 2993 DF,  p-value: 1
+
+[1] 1.618194

@@ -1,0 +1,86 @@
+
+Call:
+ivreg(formula = lwage ~ educ + exper + tenure + black | sibs + 
+    exper + tenure + black, data = wage2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.8176 -0.2403  0.0139  0.2567  1.3225 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  5.215976   0.543451   9.598  < 2e-16 ***
+educ         0.093632   0.033719   2.777  0.00560 ** 
+exper        0.020922   0.008388   2.494  0.01279 *  
+tenure       0.011548   0.002740   4.215 2.74e-05 ***
+black       -0.183329   0.050136  -3.657  0.00027 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3848 on 930 degrees of freedom
+Multiple R-Squared: 0.1685,	Adjusted R-squared: 0.165 
+Wald test: 24.92 on 4 and 930 DF,  p-value: < 2.2e-16 
+
+
+Call:
+lm(formula = lwage ~ eduhat + exper + tenure + black, data = wage2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.97409 -0.25720  0.00997  0.26147  1.25198 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  5.215976   0.568815   9.170  < 2e-16 ***
+eduhat       0.093632   0.035293   2.653 0.008114 ** 
+exper        0.020922   0.008779   2.383 0.017368 *  
+tenure       0.011548   0.002868   4.027  6.1e-05 ***
+black       -0.183329   0.052476  -3.494 0.000499 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4028 on 930 degrees of freedom
+Multiple R-squared:  0.08912,	Adjusted R-squared:  0.0852 
+F-statistic: 22.75 on 4 and 930 DF,  p-value: < 2.2e-16
+
+
+Call:
+lm(formula = educ ~ sibs, data = wage2)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-5.139 -1.683 -0.683  1.931  6.140 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 14.13879    0.11314 124.969  < 2e-16 ***
+sibs        -0.22792    0.03028  -7.528 1.22e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.134 on 933 degrees of freedom
+Multiple R-squared:  0.05726,	Adjusted R-squared:  0.05625 
+F-statistic: 56.67 on 1 and 933 DF,  p-value: 1.215e-13
+
+
+Call:
+lm(formula = lwage ~ eduhat2 + exper + tenure + black, data = wage2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.97409 -0.25720  0.00997  0.26147  1.25198 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  5.771022   0.360376  16.014  < 2e-16 ***
+eduhat2      0.069975   0.026376   2.653  0.00811 ** 
+exper       -0.000394   0.003121  -0.126  0.89957    
+tenure       0.013975   0.002691   5.193 2.54e-07 ***
+black       -0.241631   0.041528  -5.819 8.16e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4028 on 930 degrees of freedom
+Multiple R-squared:  0.08912,	Adjusted R-squared:  0.0852 
+F-statistic: 22.75 on 4 and 930 DF,  p-value: < 2.2e-16
+
